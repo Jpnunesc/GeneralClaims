@@ -9,6 +9,7 @@ namespace Business.Interfaces.Services
         Task<ReturnView> Save(FavoritosViewModel _favorito);
         Task<ReturnView> GetId(int id);
         Task<ReturnView> Delete(int id);
-        Task<ReturnView> Get();
+        Task<ReturnView> Get(bool? quantidade);
+        Task<ReturnView> GetFavoritos();
     }
 }

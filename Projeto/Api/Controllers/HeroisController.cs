@@ -20,13 +20,27 @@ namespace Api.Controllers
             _service = service;
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] FavoritosViewModel _favorito)
         {
             try
             {
                 var produto = await _service.Save(_favorito);
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
+            }
+
+        }
+
+        [HttpGet("Favoritos")]
+        public async Task<IActionResult> GetFavoritos()
+        {
+            try
+            {
+                var produto = await _service.GetFavoritos();
                 return Ok(produto);
             }
             catch (Exception ex)
@@ -49,8 +63,7 @@ namespace Api.Controllers
             }
 
         }
-        [HttpGet]
-        [Route("{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetId(int id)
         {
             try
@@ -63,12 +76,12 @@ namespace Api.Controllers
                  return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
             }
         }
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("{favorito}")]
+        public async Task<IActionResult> Get(bool? favorito)
         {
             try
             {
-                var produto = await _service.Get();
+                var produto = await _service.Get(favorito);
                 return Ok(produto);
             }
             catch (Exception ex)

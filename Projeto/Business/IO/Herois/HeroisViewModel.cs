@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Business.IO.Herois
 {
@@ -28,12 +29,19 @@ namespace Business.IO.Herois
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime Modified { get; set; }
+        public bool Favorito { get; set; }
         public String ResourceURI { get; set; }
+        [JsonIgnore]
         public IEnumerable<Urls> Urls { get; set; }
+        [JsonIgnore]
         public Thumbnail Thumbnail { get; set; }
+        [JsonIgnore]
         public Comics Comics { get; set; }
+        [JsonIgnore]
         public Stories Stories { get; set; }
+        [JsonIgnore]
         public Events Events { get; set; }
+        [JsonIgnore]
         public Series Series { get; set; }
     }
     public class Urls
