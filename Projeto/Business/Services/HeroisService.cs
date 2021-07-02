@@ -94,16 +94,16 @@ namespace Business.Services
             }
         }
 
-        public async Task<ReturnView> Get(bool? favorito)
+        public async Task<ReturnView> Get(FiltroHerois filtro)
         {
             try
             {
-                if(favorito.Value)
+                if(filtro.Favorito.Value)
                 {
-                    return GetFavoritos().Result;
-                } else if(favorito.Value == false) 
+                    return GetFavoritos(filtro).Result;
+                } else if(filtro.Favorito.Value == false) 
                 {
-                    return GetOutros().Result;
+                    return GetOutros(filtro).Result;
                 } else
                 {
                     return await GetTodos();
@@ -115,11 +115,11 @@ namespace Business.Services
             }
         }
 
-        private async Task<ReturnView> GetOutros()
+        private async Task<ReturnView> GetOutros(FiltroHerois filtro)
         {
             var url = _configuration.GetSection("ApiMarvel").Value;
             var result = JsonConvert.DeserializeObject<HeroisViewModel>(_client.GetStringAsync(url).Result);
-            var personagens = GetFavoritos();
+            var personagens = IsFavoritos(result.Data.Results);
             _client.Dispose();
             return await Task.Run(() => new ReturnView() { Object = personagens, Message = "Operação realizada com sucesso!", Status = true });
         }
@@ -128,14 +128,14 @@ namespace Business.Services
         {
             var url = _configuration.GetSection("ApiMarvel").Value;
             var result = JsonConvert.DeserializeObject<HeroisViewModel>(_client.GetStringAsync(url).Result);
-            var personagens = GetFavoritos(result);
+            var personagens = IsFavoritos(result.Data.Results);
             _client.Dispose();
             return await Task.Run(() => new ReturnView() { Object = personagens, Message = "Operação realizada com sucesso!", Status = true }); 
         }
 
-        public  HeroisViewModel GetFavoritos(HeroisViewModel result)
+        public IEnumerable<Results> IsFavoritos(IEnumerable<Results> result)
         {
-            foreach (var item in result.Data.Results)
+            foreach (var item in result)
             {
                 item.Favorito = _repository.Exists(x => x.IdFavorito == item.Id).Result;
             }
@@ -147,16 +147,22 @@ namespace Business.Services
             _repository?.Dispose();
         }
 
-        public async Task<ReturnView> GetFavoritos()
+        public async Task<ReturnView> GetFavoritos(FiltroHerois filtro)
         {
             ReturnView retorno = new ReturnView();
+            IEnumerable<Results> results = new List<Results>();
             try
             {
                 var url = _configuration.GetSection("ApiMarvel").Value + "&limit=200";
                 var personagens = await _client.GetStringAsync(url);
-                var result = GetFavoritos(JsonConvert.DeserializeObject<HeroisViewModel>(personagens));
+                var listApi = JsonConvert.DeserializeObject<HeroisViewModel>(personagens);
+                if(!string.IsNullOrEmpty(filtro.Nome))
+                {
+                    results = listApi.Data.Results.Where(x => x.Name.Contains(filtro.Nome));
+                    results = IsFavoritos(results);
+                }
                 _client?.Dispose();
-                var el = result.Data.Results.Where(x => x.Favorito == true).ToList();
+                var el = results.Where(x => x.Favorito == true).ToList() ?? listApi.Data.Results.Where(x => x.Favorito == true).ToList();
                 retorno = new ReturnView() { Object = el, Message = "Operação realizada com sucesso!", Status = true };
 
 

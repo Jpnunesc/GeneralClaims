@@ -34,21 +34,6 @@ namespace Api.Controllers
             }
 
         }
-
-        [HttpGet("Favoritos")]
-        public async Task<IActionResult> GetFavoritos()
-        {
-            try
-            {
-                var produto = await _service.GetFavoritos();
-                return Ok(produto);
-            }
-            catch (Exception ex)
-            {
-                return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
-            }
-
-        }
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
@@ -76,12 +61,12 @@ namespace Api.Controllers
                  return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
             }
         }
-        [HttpGet("{favorito}")]
-        public async Task<IActionResult> Get(bool? favorito)
+        [HttpGet]
+        public async Task<IActionResult> Get(FiltroHerois filtro)
         {
             try
             {
-                var produto = await _service.Get(favorito);
+                var produto = await _service.Get(filtro);
                 return Ok(produto);
             }
             catch (Exception ex)
