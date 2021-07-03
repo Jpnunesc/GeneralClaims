@@ -13,7 +13,7 @@ namespace Api.Controllers
 
     public class HeroisController : ControllerBase
     {
-        private IHeroisService _service;
+        private  readonly IHeroisService _service;
 
         public HeroisController(IHeroisService service)
         {
@@ -62,7 +62,7 @@ namespace Api.Controllers
             }
         }
         [HttpGet]
-        public async Task<IActionResult> Get(FiltroHerois filtro)
+        public async Task<IActionResult> Get([FromQuery] FiltroHerois filtro)
         {
             try
             {
@@ -73,6 +73,21 @@ namespace Api.Controllers
             {
                 return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
             }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] FavoritosViewModel _favorito)
+        {
+            try
+            {
+                var produto = await _service.Put(_favorito);
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new ReturnView() { Object = null, Message = ex.Message, Status = false });
+            }
+
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj": {}
+    "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
+    "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\obj\\",
+        "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj"
+              "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj"
               }
             }
           }
@@ -88,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj": {
+    "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj",
+        "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj",
         "projectName": "CrossCuttingIoC",
-        "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj",
-        "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\CrossCuttingIoC\\obj\\",
+        "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\CrossCuttingIoC\\CrossCuttingIoC.csproj",
+        "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\CrossCuttingIoC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,17 +111,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
-                "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj"
+              "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
+                "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj"
               },
-              "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\Infra.csproj"
+              "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\Infra.csproj"
               }
             }
           }
@@ -155,21 +157,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
+    "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\obj\\",
+        "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -177,7 +179,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -209,21 +212,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\Infra.csproj": {
+    "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Infra\\obj\\",
+        "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -231,17 +234,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
-                "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Business\\Business.csproj"
+              "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj": {
+                "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Business\\Business.csproj"
               },
-              "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj"
+              "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj"
               }
             }
           }
@@ -296,7 +300,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

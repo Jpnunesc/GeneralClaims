@@ -52,3 +52,12 @@ C:\projetos\GeneralClaims\GeneralClaims1\Projeto\Domain\obj\Debug\netcoreapp3.1\
 C:\projetos\GeneralClaims\GeneralClaims1\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
 C:\projetos\GeneralClaims\GeneralClaims1\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.dll
 C:\projetos\GeneralClaims\GeneralClaims1\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

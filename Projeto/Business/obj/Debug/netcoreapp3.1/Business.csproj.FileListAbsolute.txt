@@ -82,3 +82,15 @@ C:\projetos\Nova pasta\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Bu
 C:\projetos\Nova pasta\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
 C:\projetos\Nova pasta\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.dll
 C:\projetos\Nova pasta\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\bin\Debug\netcoreapp3.1\Business.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\bin\Debug\netcoreapp3.1\Business.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\Business\obj\Debug\netcoreapp3.1\Business.pdb

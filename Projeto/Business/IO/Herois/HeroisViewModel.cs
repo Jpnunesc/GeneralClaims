@@ -30,6 +30,7 @@ namespace Business.IO.Herois
         public string Description { get; set; }
         public DateTime Modified { get; set; }
         public bool Favorito { get; set; }
+        public string Comentario { get; set; }
         public String ResourceURI { get; set; }
         [JsonIgnore]
         public IEnumerable<Urls> Urls { get; set; }

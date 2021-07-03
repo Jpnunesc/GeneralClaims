@@ -17,9 +17,9 @@ namespace Business.Services
 {
     public class HeroisService : IHeroisService
     {
-        HttpClient _client = new HttpClient();
+        readonly HttpClient _client = new HttpClient();
         private readonly IMapper _mapper;
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
         private readonly IFavoritosRepository _repository;
         public HeroisService(IMapper mapper, IFavoritosRepository repository, IConfiguration configuration)
         {
@@ -33,11 +33,7 @@ namespace Business.Services
             ReturnView retorno = new ReturnView();
             FavoritosValidation validator = new FavoritosValidation();
             var valid = validator.Validate(_favorito);
-            if (!valid.IsValid)
-            {
-                retorno.Status = false;
-                retorno.Message = valid.Errors[0].ErrorMessage;
-            }
+            if (!valid.IsValid) return new ReturnView() { Object = null, Message = valid.Errors[0].ErrorMessage, Status = false };
             var register = _mapper.Map<FavoritosViewModel, FavoritosEntity>(_favorito);
             try
             {
@@ -62,9 +58,10 @@ namespace Business.Services
             try
             {
             var url = _configuration.GetSection("ApiMarvel").Value;
-            var result = GetFavoritos(JsonConvert.DeserializeObject<HeroisViewModel>(await _client.GetStringAsync(url.Substring(0, 51) + "/" + id + url.Substring(51))));
+            var personagens = JsonConvert.DeserializeObject<HeroisViewModel>(await _client.GetStringAsync(String.Concat(url.Substring(0, 51),"/",id,url.Substring(51))));
+            var result = IsFavoritos(personagens.Data.Results);
             _client.Dispose();
-             retorno = new ReturnView() { Object = result.Data.Results, Message = "Operação realizada com sucesso!", Status = true };
+             retorno = new ReturnView() { Object = result, Message = "Operação realizada com sucesso!", Status = true };
 
             }
             catch (Exception ex)
@@ -85,7 +82,7 @@ namespace Business.Services
                     return new ReturnView() { Status = true, Message = "Operação realizada com sucesso!" };
                 } else
                 {
-                    return new ReturnView() { Status = true, Message = "Este personagem não é favorito seu!" };
+                    return new ReturnView() { Status = true, Message = "Id inválido! Favor escolher id de um personagem favorito!" };
                 }
             }
             catch (Exception ex)
@@ -98,15 +95,18 @@ namespace Business.Services
         {
             try
             {
-                if(filtro.Favorito.Value)
+                var url = String.Concat(_configuration.GetSection("ApiMarvel").Value, "&limit=100");
+                var result = JsonConvert.DeserializeObject<HeroisViewModel>(await _client.GetStringAsync(url));
+                _client.Dispose();
+                if (filtro.Favorito == true)
                 {
-                    return GetFavoritos(filtro).Result;
-                } else if(filtro.Favorito.Value == false) 
+                    return GetFavoritos(filtro, result);
+                } else if(filtro.Favorito == false) 
                 {
-                    return GetOutros(filtro).Result;
+                    return GetNaoFavorito(filtro, result);
                 } else
                 {
-                    return await GetTodos();
+                    return GetTodos(filtro, result);
                 }
             }
             catch (Exception ex)
@@ -115,62 +115,76 @@ namespace Business.Services
             }
         }
 
-        private async Task<ReturnView> GetOutros(FiltroHerois filtro)
+        private ReturnView GetNaoFavorito(FiltroHerois filtro, HeroisViewModel result)
         {
-            var url = _configuration.GetSection("ApiMarvel").Value;
-            var result = JsonConvert.DeserializeObject<HeroisViewModel>(_client.GetStringAsync(url).Result);
             var personagens = IsFavoritos(result.Data.Results);
-            _client.Dispose();
-            return await Task.Run(() => new ReturnView() { Object = personagens, Message = "Operação realizada com sucesso!", Status = true });
+            if(!string.IsNullOrEmpty(filtro.Nome)) personagens = personagens.Where(x => x.Name.Contains(filtro.Nome));
+            return new ReturnView() { Object = personagens.Where(x => !x.Favorito), Message = "Operação realizada com sucesso!", Status = true };
         }
 
-        private async Task<ReturnView> GetTodos()
+        private ReturnView GetTodos(FiltroHerois filtro, HeroisViewModel herois)
         {
-            var url = _configuration.GetSection("ApiMarvel").Value;
-            var result = JsonConvert.DeserializeObject<HeroisViewModel>(_client.GetStringAsync(url).Result);
-            var personagens = IsFavoritos(result.Data.Results);
-            _client.Dispose();
-            return await Task.Run(() => new ReturnView() { Object = personagens, Message = "Operação realizada com sucesso!", Status = true }); 
+            IEnumerable<Results> result = herois?.Data.Results;
+            if (!string.IsNullOrEmpty(filtro.Nome)) result = result.Where(x => x.Name.Contains(filtro.Nome));
+            var personagens = IsFavoritos(result);
+            return new ReturnView() { Object = personagens.OrderByDescending(x => x.Favorito), Message = "Operação realizada com sucesso!", Status = true }; 
         }
 
         public IEnumerable<Results> IsFavoritos(IEnumerable<Results> result)
         {
             foreach (var item in result)
             {
-                item.Favorito = _repository.Exists(x => x.IdFavorito == item.Id).Result;
+                var temp = _repository.Get(x => x.IdFavorito == item.Id).Result;
+                item.Favorito = temp != null;
+                item.Comentario = temp != null ? temp.Comentario : "";
             }
             return result;
         }
 
-        public void Dispose()
+        private ReturnView GetFavoritos(FiltroHerois filtro, HeroisViewModel herois)
         {
-            _repository?.Dispose();
-        }
-
-        public async Task<ReturnView> GetFavoritos(FiltroHerois filtro)
-        {
-            ReturnView retorno = new ReturnView();
-            IEnumerable<Results> results = new List<Results>();
+            IEnumerable<Results> results = herois?.Data.Results;
             try
             {
-                var url = _configuration.GetSection("ApiMarvel").Value + "&limit=200";
-                var personagens = await _client.GetStringAsync(url);
-                var listApi = JsonConvert.DeserializeObject<HeroisViewModel>(personagens);
                 if(!string.IsNullOrEmpty(filtro.Nome))
                 {
-                    results = listApi.Data.Results.Where(x => x.Name.Contains(filtro.Nome));
-                    results = IsFavoritos(results);
+                    results = results.Where(x => x.Name.Contains(filtro.Nome));
                 }
-                _client?.Dispose();
-                var el = results.Where(x => x.Favorito == true).ToList() ?? listApi.Data.Results.Where(x => x.Favorito == true).ToList();
-                retorno = new ReturnView() { Object = el, Message = "Operação realizada com sucesso!", Status = true };
+                results = IsFavoritos(results);
+                return new ReturnView() { Object = results.Where(x => x.Favorito), Message = "Operação realizada com sucesso!", Status = true };
 
 
             }
             catch (Exception ex)
             {
-                retorno = new ReturnView() { Object = null, Message = ex.Message, Status = false };
+                 return new ReturnView() { Object = null, Message = ex.Message, Status = false };
+            }
+        }
+        public async Task<ReturnView> Put(FavoritosViewModel favorito)
+        {
 
+            ReturnView retorno = new ReturnView();
+            FavoritosUpdateValidation validator = new FavoritosUpdateValidation();
+            var valid = validator.Validate(favorito);
+            if (!valid.IsValid) return new ReturnView() { Object = null, Message = valid.Errors[0].ErrorMessage, Status = false };
+            var register = _mapper.Map<FavoritosViewModel, FavoritosEntity>(favorito);
+            try
+            {
+                var personagem = await _repository.Get(x => x.IdFavorito == register.IdFavorito);
+                if (personagem != null)
+                {
+                    personagem.Comentario = favorito.comentario;
+                    var result = _mapper.Map<FavoritosEntity, FavoritosViewModel>(await _repository.Update(register));
+                    retorno = new ReturnView() { Object = result, Message = "Operação realizada com sucesso!", Status = true };
+                }
+                else
+                {
+                    retorno = new ReturnView() { Object = null, Message = "idFaforito inválido! Favor escolher id de um personagem favorito!", Status = false };
+                }
+            }
+            catch (Exception ex)
+            {
+                retorno = new ReturnView() { Object = null, Message = ex.Message, Status = false };
             }
             return retorno;
         }

@@ -126,3 +126,19 @@ C:\projetos\Nova pasta\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreap
 C:\projetos\Nova pasta\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.csproj.CopyComplete
 C:\projetos\Nova pasta\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.dll
 C:\projetos\Nova pasta\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\CrossCuttingIoC.deps.json
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\CrossCuttingIoC.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\CrossCuttingIoC.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Business.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Infra.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Business.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Infra.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.csprojAssemblyReference.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.AssemblyInfoInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.AssemblyInfo.cs
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.csproj.CoreCompileInputs.cache
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.csproj.CopyComplete
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.dll
+C:\Projetos\pocs\GeneralClaims\Projeto\CrossCuttingIoC\obj\Debug\netcoreapp3.1\CrossCuttingIoC.pdb

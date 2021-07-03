@@ -8,5 +8,6 @@ namespace Domain.Entitys
     public class FavoritosEntity : BaseEntity
     {
         public int IdFavorito { get; set; }
+        public string Comentario { get; set; }
     }
 }

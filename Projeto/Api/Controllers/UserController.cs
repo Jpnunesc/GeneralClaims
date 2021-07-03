@@ -14,8 +14,8 @@ namespace WebApi.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private IUserService _service;
-        private ITokenService _tokenService;
+        private readonly IUserService _service;
+        private readonly ITokenService _tokenService;
 
         public UsersController(IUserService service, ITokenService tokenService)
         {

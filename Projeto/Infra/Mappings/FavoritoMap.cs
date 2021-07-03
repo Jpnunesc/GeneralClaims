@@ -21,7 +21,12 @@ namespace Infra.Mappings
                    .HasColumnName("Id");
 
             builder.Property(t => t.IdFavorito)
-                   .HasColumnName("IdFavorito");
+                   .HasColumnName("IdFavorito")
+                   ;
+            builder.Property(t => t.Comentario)
+                  .HasColumnName("Comentario")
+                  .HasMaxLength(150);
+
         }
     }
 }

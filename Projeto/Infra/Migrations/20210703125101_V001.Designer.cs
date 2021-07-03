@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Migrations
 {
     [DbContext(typeof(GeneralClaimsContext))]
-    [Migration("20210701014247_v0")]
-    partial class v0
+    [Migration("20210703125101_V001")]
+    partial class V001
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,15 @@ namespace Infra.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Id")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Comentario")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("Comentario");
+
+                    b.Property<int>("IdFavorito")
+                        .HasColumnType("int")
+                        .HasColumnName("IdFavorito");
 
                     b.HasKey("Id");
 

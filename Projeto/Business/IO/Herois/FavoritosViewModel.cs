@@ -7,5 +7,6 @@ namespace Business.IO.Herois
    public class FavoritosViewModel
     {
         public int IdFavorito { get; set; }
+        public string comentario { get; set; }
     }
 }

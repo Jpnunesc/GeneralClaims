@@ -26,6 +26,11 @@ namespace Infra.Migrations
                         .HasColumnName("Id")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Comentario")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("Comentario");
+
                     b.Property<int>("IdFavorito")
                         .HasColumnType("int")
                         .HasColumnName("IdFavorito");

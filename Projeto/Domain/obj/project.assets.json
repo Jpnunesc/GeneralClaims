@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\jpcos\\.nuget\\packages\\": {}
+    "C:\\Users\\joao.costa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-      "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\obj\\",
+      "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

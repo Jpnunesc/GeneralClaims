@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JJ3a6DnyujRPTB2TQmLNdhOg48fJQI1ZsJrxtB7lTTuBweihgmU2LW0lmMh/uSWggs+NwfYmj5qhPY91Fr9IRA==",
+  "dgSpecHash": "fPfld7hJrN8TBmYt453fwZ/3ZS6Gh5W1a6uAWNxSytTGfZieL8vHECzGxUfxKgshIgI37yb3Hen0sXRRDDL4AA==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

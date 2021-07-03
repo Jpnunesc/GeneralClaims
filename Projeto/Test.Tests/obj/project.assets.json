@@ -9247,19 +9247,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jpcos\\.nuget\\packages\\": {}
+    "C:\\Users\\joao.costa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Test.Tests\\Test.Tests.csproj",
+      "projectUniqueName": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Test.Tests\\Test.Tests.csproj",
       "projectName": "Test.Tests",
-      "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Test.Tests\\Test.Tests.csproj",
-      "packagesPath": "C:\\Users\\jpcos\\.nuget\\packages\\",
-      "outputPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Test.Tests\\obj\\",
+      "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Test.Tests\\Test.Tests.csproj",
+      "packagesPath": "C:\\Users\\joao.costa\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Test.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jpcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joao.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9267,14 +9267,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/superainovacoes/sitemercado/_packaging/sm-nuget/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Api\\Api.csproj": {
-              "projectPath": "C:\\projetos\\Nova pasta\\GeneralClaims\\Projeto\\Api\\Api.csproj"
+            "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Api\\Api.csproj": {
+              "projectPath": "C:\\Projetos\\pocs\\GeneralClaims\\Projeto\\Api\\Api.csproj"
             }
           }
         }
@@ -9325,14 +9326,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

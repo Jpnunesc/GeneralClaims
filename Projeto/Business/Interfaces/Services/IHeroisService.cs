@@ -10,6 +10,6 @@ namespace Business.Interfaces.Services
         Task<ReturnView> GetId(int id);
         Task<ReturnView> Delete(int id);
         Task<ReturnView> Get(FiltroHerois filtro);
-       // Task<ReturnView> GetFavoritos();
+        Task<ReturnView> Put(FavoritosViewModel favorito);
     }
 }
